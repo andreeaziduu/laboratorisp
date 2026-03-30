@@ -1,0 +1,6 @@
+Student: 1024, Ioan, Mihalcea, ISM141/1,9.8
+Student: 1025, Andrei, Popa, ISM141/2,8.7
+Student: 1026, Anamaria, Prodan, TI131/1,8.9
+Student: 1029, Bianca, Popescu, TI131/2,9.1
+Student: 1027, Paul, Mohanu, TI132/1,5.4
+Student: 1028, Mihai, Ionescu, TI132/2,6.2

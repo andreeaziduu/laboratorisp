@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7d2e40c0-faf3-49bc-960f-37a228e2fd48" name="Changes" comment="Erori de configurare">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+      <option value="repository" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AndreeaZiduu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AndreeaZiduu/LaboratorISP&quot;,
+    &quot;accountId&quot;: &quot;e7eab460-67f8-4164-beb7-c5161f79cc4f&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3AkbG1mA2Hz7QxT0c51BnYoyRW4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AppLab4.executor": "Run",
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/ISP",
+    "onboarding.tips.debug.path": "C:/ISP/Lab4/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.splitter.proportion": "0.3070078",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\ISP" />
+      <recent name="C:\ISP\Lab3" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d2e40c0-faf3-49bc-960f-37a228e2fd48" name="Changes" comment="" />
+      <created>1773139416405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773139416405</updated>
+      <workItem from="1773139418431" duration="382000" />
+      <workItem from="1773154087528" duration="2394000" />
+      <workItem from="1773156564727" duration="97000" />
+      <workItem from="1773156706666" duration="1035000" />
+      <workItem from="1773169150935" duration="45000" />
+      <workItem from="1773580501393" duration="1854000" />
+      <workItem from="1773668995825" duration="3501000" />
+      <workItem from="1773726853636" duration="4253000" />
+      <workItem from="1774116765103" duration="5762000" />
+      <workItem from="1774180704254" duration="6130000" />
+      <workItem from="1774331503591" duration="4493000" />
+      <workItem from="1774357987173" duration="165000" />
+      <workItem from="1774370532056" duration="3850000" />
+      <workItem from="1774605964430" duration="730000" />
+      <workItem from="1774876089960" duration="65000" />
+      <workItem from="1774876192397" duration="6928000" />
+      <workItem from="1774891774168" duration="1527000" />
+      <workItem from="1774895173297" duration="279000" />
+      <workItem from="1774895481402" duration="221000" />
+      <workItem from="1774895799490" duration="19000" />
+      <workItem from="1774895849179" duration="290000" />
+    </task>
+    <task id="LOCAL-00001" summary="Reorganizare">
+      <option name="closed" value="true" />
+      <created>1773154926344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773154926345</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Reorganizare si nou repository">
+      <option name="closed" value="true" />
+      <created>1773157022033</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773157022035</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ex 2, punctul a">
+      <option name="closed" value="true" />
+      <created>1773582378011</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1773582378011</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ex 2, punctul a">
+      <option name="closed" value="true" />
+      <created>1773582392818</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773582392818</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ex 2, punctele b si c">
+      <option name="closed" value="true" />
+      <created>1773671133055</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1773671133056</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Tema casa laborator 2">
+      <option name="closed" value="true" />
+      <created>1773672910444</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1773672910445</updated>
+    </task>
+    <task id="LOCAL-00007" summary="laborator 3, ex 1 complet">
+      <option name="closed" value="true" />
+      <created>1774121356216</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1774121356217</updated>
+    </task>
+    <task id="LOCAL-00008" summary="laborator 3, ex 2">
+      <option name="closed" value="true" />
+      <created>1774184929955</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1774184929956</updated>
+    </task>
+    <task id="LOCAL-00009" summary="laborator 3, tema de casa">
+      <option name="closed" value="true" />
+      <created>1774186929576</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1774186929576</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Laborator 4, ex 4.5.1">
+      <option name="closed" value="true" />
+      <created>1774337202843</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1774337202844</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Laborator 4, ex 4.5.2">
+      <option name="closed" value="true" />
+      <created>1774882284380</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1774882284380</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Erori de configurare">
+      <option name="closed" value="true" />
+      <created>1774883308136</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1774883308137</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Lab2" />
+      <path value="$PROJECT_DIR$/TLab1" />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Reorganizare" />
+    <MESSAGE value="Reorganizare si nou repository" />
+    <MESSAGE value="ex 2, punctul a" />
+    <MESSAGE value="ex 2, punctele b si c" />
+    <MESSAGE value="Tema casa laborator 2" />
+    <MESSAGE value="laborator 3, ex 1 complet" />
+    <MESSAGE value="laborator 3, ex 2" />
+    <MESSAGE value="laborator 3, tema de casa" />
+    <MESSAGE value="Laborator 4, ex 4.5.1" />
+    <MESSAGE value="Laborator 4, ex 4.5.2" />
+    <MESSAGE value="Erori de configurare" />
+    <option name="LAST_COMMIT_MESSAGE" value="Erori de configurare" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Lab4/src/Main.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
