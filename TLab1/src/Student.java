@@ -9,6 +9,18 @@ public class Student implements Comparable <Student>{
         this.nota = nota;
     }
 
+    public String getPrenume() {
+        return prenume;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public double getNota() {
+        return nota;
+    }
+
     public Student (int numarMatricol, String prenume, String nume, String formatieDeStudiu) {
         this.numarMatricol=numarMatricol;
         this.prenume=prenume;

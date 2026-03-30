@@ -37,6 +37,8 @@ public class Main {
             e.printStackTrace();
         }
 
+
+
     }
 
     static void citire (String fileName) throws  IOException{
@@ -85,17 +87,32 @@ public class Main {
         Path path1 = Paths.get("studenti_out_sorted.txt");
         Files.write(path1, salvat);
 
-        
+        // --- Adaugă aici, la finalul metodei citire ---
+        float notaM = retNota("Bianca", "Popescu", ListaStudentiMap);
+        float notaN = retNota("Ioan", "Popa", ListaStudentiMap);
+
+        System.out.println("Nota Bianca Popescu: " + notaM);
+        System.out.println("Nota Ioan Popa: " + notaN);
 
 
+    }
 
+    static float retNota (String prenume, String nume, Map<Integer, Student> tineriS){
 
+        HashMap<String, Student > Newmap = new HashMap<>();
 
+        for (Student s: tineriS.values()){
+            String cheie = s.getPrenume()+ "-" + s.getNume();
+            Newmap.put(cheie, s);
+        }
 
+        String cheieCautata = prenume + "-" + nume;
 
+        if (Newmap.containsKey(cheieCautata)) {
+            return (float) Newmap.get(cheieCautata).getNota();
+        }
 
-
-
+        return 0.0f;
 
     }
 

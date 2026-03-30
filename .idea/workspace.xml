@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d2e40c0-faf3-49bc-960f-37a228e2fd48" name="Changes" comment="Erori de configurare">
+    <list default="true" id="7d2e40c0-faf3-49bc-960f-37a228e2fd48" name="Changes" comment="Erori de configurare&#10;Repository nou">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TLab1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/TLab1/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TLab1/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/TLab1/src/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +114,7 @@
       <workItem from="1774895173297" duration="279000" />
       <workItem from="1774895481402" duration="221000" />
       <workItem from="1774895799490" duration="19000" />
-      <workItem from="1774895849179" duration="290000" />
+      <workItem from="1774895849179" duration="1538000" />
     </task>
     <task id="LOCAL-00001" summary="Reorganizare">
       <option name="closed" value="true" />
@@ -210,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774883308137</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Erori de configurare&#10;Repository nou">
+      <option name="closed" value="true" />
+      <created>1774896309069</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1774896309070</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +254,8 @@
     <MESSAGE value="Laborator 4, ex 4.5.1" />
     <MESSAGE value="Laborator 4, ex 4.5.2" />
     <MESSAGE value="Erori de configurare" />
-    <option name="LAST_COMMIT_MESSAGE" value="Erori de configurare" />
+    <MESSAGE value="Erori de configurare&#10;Repository nou" />
+    <option name="LAST_COMMIT_MESSAGE" value="Erori de configurare&#10;Repository nou" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
