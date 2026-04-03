@@ -1,0 +1,4 @@
+Student: 1025, Andrei, Popa, ISM141/2,8.7, Bursa: 725.5
+Student: 1024, Ioan, Mihalcea, ISM141/1,9.8, Bursa: 801.1
+Student: 1026, Anamaria, Prodan, TI131/1,8.9, Bursa: 745.5
+Student: 1029, Bianca, Popescu, TI131/1,,9.1, Bursa: 780.8

@@ -1,9 +1,9 @@
 public class Student implements Comparable <Student>{
-    private int numarMatricol;
-    private String prenume;
-    private String nume;
-    private String formatieDeStudiu;
-    private double nota;
+    protected int numarMatricol;
+    protected String prenume;
+    protected String nume;
+    protected String formatieDeStudiu;
+    protected double nota;
 
     public void setNota(double nota) {
         this.nota = nota;

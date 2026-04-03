@@ -5,31 +5,10 @@ import java.nio.file.Paths;
 import java.util.*;
 
 
+
+
 public class Main {
     public static void main(String[] args) {
-        /*Student student1 = new Student(300, "Mihaela", "Popescu", "ISM Grupa 21");
-        System.out.println(student1);
-        Student student2 = new Student(210, "Bianca", "Florescu", "ISM Grupa 21");
-        Student student3 = new Student(90, "Maria", "Zidu", "ISM Grupa 21");
-        Student student4 = new Student(157, "Ana", "Berea", "ISM Grupa 21");
-
-        List<Student> ListaStudenti = new ArrayList();
-        ListaStudenti.add(student1);
-        ListaStudenti.add(student2);
-        ListaStudenti.add(student3);
-        ListaStudenti.add(student4);
-
-        Student studentcautat1 = new Student (90, "Alias", "Popa", "ISM Grupa 21" );
-        Set<Student> SetStudenti =  new HashSet<>(ListaStudenti);
-        if (SetStudenti.contains(studentcautat1)){
-            System.out.println(studentcautat1 + " este prezent");
-        }
-        else
-            System.out.println(studentcautat1 + " nu este prezent");
-
-
-        for (Student s : ListaStudenti)
-            System.out.println(s);*/
 
         try {
             citire("infile.txt");
@@ -38,48 +17,65 @@ public class Main {
         }
 
 
+        List<StudentBursier> bursieri = new ArrayList();
+
+        bursieri.add(new StudentBursier(1025, "Andrei", "Popa", "ISM141/2", 8.70, 725.50));
+        bursieri.add(new StudentBursier(1024, "Ioan", "Mihalcea", "ISM141/1", 9.80, 801.10));
+        bursieri.add(new StudentBursier(1026, "Anamaria", "Prodan", "TI131/1", 8.90, 745.50));
+        bursieri.add(new StudentBursier(1029, "Bianca", "Popescu", "TI131/1,", 9.10, 780.80));
+
+        List<String> fisierBurse = new ArrayList();
+        for (StudentBursier sb: bursieri){
+            fisierBurse.add(sb.toString());
+        }
+        try {
+            salveazaInFisier(fisierBurse, "TLab1/bursieri_out.txt");
+            salveazaInFisier(fisierBurse, "TLab1/bursieri_out.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
-    static void citire (String fileName) throws  IOException{
+    static void citire(String fileName) throws IOException {
         Path path = Paths.get("studenti_in.txt");
-        List <String> linii = Files.readAllLines(path);
+        List<String> linii = Files.readAllLines(path);
         List<Student> ListaStudenti = new ArrayList<>();
 
-        HashMap<Integer, Student> ListaStudentiMap= new HashMap<>();
+        Map<Integer, Student> listaStudentiMap = new HashMap<>();
 
-        for (String linie : linii){
-            String [] date = linie.split(",");
-            int matricol= Integer.parseInt(date[0]);
+        for (String linie : linii) {
+            String[] date = linie.split(",");
+            int matricol = Integer.parseInt(date[0]);
             String prenume = date[1];
             String nume = date[2];
             String formatie = date[3];
 
             Student s = new Student(matricol, prenume, nume, formatie);
             ListaStudenti.add(s);
-            ListaStudentiMap.put(matricol, s);
+            listaStudentiMap.put(matricol, s);
 
             Path pathNote = Paths.get("TLab1/note_anon.txt");
-            List <String> Note = Files.readAllLines(pathNote);
+            List<String> Note = Files.readAllLines(pathNote);
 
             for (String linien : Note) {
-                String[] datenote=  linien.split(",");
+                String[] datenote = linien.split(",");
                 int matricolNr = Integer.parseInt(datenote[0]);
                 double valNota = Double.parseDouble(datenote[1]);
 
-                Student st = ListaStudentiMap.get(matricolNr);
-                if(st != null){
+                Student st = listaStudentiMap.get(matricolNr);
+                if (st != null) {
                     st.setNota(valNota);
                 }
             }
-
 
 
         }
         Collections.sort(ListaStudenti);
 
         List<String> salvat = new ArrayList<>();
-        for (Student s: ListaStudenti){
+        for (Student s : ListaStudenti) {
             salvat.add(s.toString());
             System.out.println(s);
         }
@@ -87,9 +83,10 @@ public class Main {
         Path path1 = Paths.get("studenti_out_sorted.txt");
         Files.write(path1, salvat);
 
-        // --- Adaugă aici, la finalul metodei citire ---
-        float notaM = retNota("Bianca", "Popescu", ListaStudentiMap);
-        float notaN = retNota("Ioan", "Popa", ListaStudentiMap);
+
+        float notaM = retNota("Bianca", "Popescu", listaStudentiMap);
+        float notaN = retNota("Ioan", "Popa", listaStudentiMap);
+
 
         System.out.println("Nota Bianca Popescu: " + notaM);
         System.out.println("Nota Ioan Popa: " + notaN);
@@ -97,24 +94,28 @@ public class Main {
 
     }
 
-    static float retNota (String prenume, String nume, Map<Integer, Student> tineriS){
+    static float retNota(String prenume, String nume, Map<Integer, Student> tineriS) {
 
-        HashMap<String, Student > Newmap = new HashMap<>();
+        HashMap<String, Student> newmap = new HashMap<>();
 
-        for (Student s: tineriS.values()){
-            String cheie = s.getPrenume()+ "-" + s.getNume();
-            Newmap.put(cheie, s);
+        for (Student s : tineriS.values()) {
+            String cheie = s.getPrenume() + "-" + s.getNume();
+            newmap.put(cheie, s);
         }
 
         String cheieCautata = prenume + "-" + nume;
 
-        if (Newmap.containsKey(cheieCautata)) {
-            return (float) Newmap.get(cheieCautata).getNota();
+        if (newmap.containsKey(cheieCautata)) {
+            return (float) newmap.get(cheieCautata).getNota();
         }
 
         return 0.0f;
 
     }
 
+    static void salveazaInFisier(List<String> lines, String fileName) throws IOException {
+        Path path = Paths.get(fileName);
+        Files.write(path, lines);
+    }
 }
 
