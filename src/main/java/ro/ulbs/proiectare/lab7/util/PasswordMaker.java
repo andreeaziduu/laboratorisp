@@ -5,7 +5,7 @@ public class PasswordMaker {
     private static final String MAGIC_STRING;
 
     private static PasswordMaker instance = null;
-    private static int contor = 0;
+    private static int contorr = 0;
 
     private String name;
 
@@ -21,11 +21,11 @@ public class PasswordMaker {
     }
 
     public static PasswordMaker getInstance(){
-        contor++;
+        contorr++;
         return instance;
     }
-    public static int getContor(){
-        return contor;
+    public static int getContorr(){
+        return contorr;
     }
 
     public String getPassword() {
