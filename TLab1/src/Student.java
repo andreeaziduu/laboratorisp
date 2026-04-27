@@ -1,13 +1,10 @@
 public class Student implements Comparable <Student>{
-    protected int numarMatricol;
-    protected String prenume;
-    protected String nume;
-    protected String formatieDeStudiu;
-    protected double nota;
+    protected final int numarMatricol;
+    protected final String prenume;
+    protected final String nume;
+    protected final String formatieDeStudiu;
+    protected final double nota;
 
-    public void setNota(double nota) {
-        this.nota = nota;
-    }
 
     public String getPrenume() {
         return prenume;
@@ -21,11 +18,16 @@ public class Student implements Comparable <Student>{
         return nota;
     }
 
-    public Student (int numarMatricol, String prenume, String nume, String formatieDeStudiu) {
+    public int getNumarMatricol() {return numarMatricol;}
+
+    public String getFormatieDeStudiu() {return formatieDeStudiu;}
+
+    public Student (int numarMatricol, String prenume, String nume, String formatieDeStudiu, double nota) {
         this.numarMatricol=numarMatricol;
         this.prenume=prenume;
         this.nume=nume;
         this.formatieDeStudiu=formatieDeStudiu;
+        this.nota = nota;
     }
     public String toString(){
         return "Student: " + numarMatricol+ ", "+  prenume +", "+ nume + ", " + formatieDeStudiu+ ','+ nota;

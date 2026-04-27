@@ -36,6 +36,8 @@ public class Main {
         }
 
 
+
+
     }
 
     static void citire(String fileName) throws IOException {
@@ -52,7 +54,7 @@ public class Main {
             String nume = date[2];
             String formatie = date[3];
 
-            Student s = new Student(matricol, prenume, nume, formatie);
+            Student s = new Student(matricol, prenume, nume, formatie, 0.0);
             ListaStudenti.add(s);
             listaStudentiMap.put(matricol, s);
 
@@ -66,12 +68,14 @@ public class Main {
 
                 Student st = listaStudentiMap.get(matricolNr);
                 if (st != null) {
-                    st.setNota(valNota);
+                    Student studentActualizat = new Student(st.getNumarMatricol(), st.getPrenume(), st.getNume(), st.getFormatieDeStudiu(), valNota);
+                    listaStudentiMap.put(matricolNr, studentActualizat);
                 }
             }
 
 
         }
+        ListaStudenti = new ArrayList<>(listaStudentiMap.values());
         Collections.sort(ListaStudenti);
 
         List<String> salvat = new ArrayList<>();
@@ -91,6 +95,7 @@ public class Main {
         System.out.println("Nota Bianca Popescu: " + notaM);
         System.out.println("Nota Ioan Popa: " + notaN);
 
+        MutaStudent(ListaStudenti);
 
     }
 
@@ -116,6 +121,32 @@ public class Main {
     static void salveazaInFisier(List<String> lines, String fileName) throws IOException {
         Path path = Paths.get(fileName);
         Files.write(path, lines);
+    }
+
+    public static void MutaStudent(List<Student> listaInitiala){
+        int n = listaInitiala.size();
+        int mijloc = (n+1)/2;
+
+        List<Student> f1 = new ArrayList();
+        List<Student> f2 = new ArrayList();
+
+        for (int i=0; i<n; i++){
+            Student s= listaInitiala.get(i);
+
+            if(i<mijloc){
+                f1.add(new Student(s.getNumarMatricol(), s.getPrenume(), s.getNume(), s.getFormatieDeStudiu(), s.getNota()));
+            }
+            else {
+                f2.add(new Student(s.getNumarMatricol(), s.getPrenume(), s.getNume(), s.getFormatieDeStudiu(), s.getNota()));
+            }
+        }
+
+        System.out.println("----Rezultate impartite----");
+        System.out.println("Formatia 1:");
+        f1.forEach(System.out::println);
+
+        System.out.println("Formatia 2:");
+        f2.forEach(System.out::println);
     }
 }
 
