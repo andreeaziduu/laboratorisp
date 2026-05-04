@@ -1,3 +1,10 @@
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,7 +23,13 @@ public class Main {
             e.printStackTrace();
         }
 
+        List<Student> ListaStudenti = new ArrayList<>();
+        try {
 
+            ListaStudenti = citire("studenti_in.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         List<StudentBursier> bursieri = new ArrayList();
 
         bursieri.add(new StudentBursier(1025, "Andrei", "Popa", "ISM141/2", 8.70, 725.50));
@@ -34,13 +47,17 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        String xlsFileName = "laborator8_students.xlsx";
+        WriteToXls(new HashSet<>(ListaStudenti), xlsFileName);
 
-
-
-
+        List<Student> studentsFromXls = readFromXls(xlsFileName); //Citeste studentii in ArraList
+        System.out.println("\n Studenti cititi din xlsx:");
+        for(Student st: studentsFromXls) {
+            System.out.println(st);
+        }
     }
 
-    static void citire(String fileName) throws IOException {
+    static List<Student> citire(String fileName) throws IOException {
         Path path = Paths.get("studenti_in.txt");
         List<String> linii = Files.readAllLines(path);
         List<Student> ListaStudenti = new ArrayList<>();
@@ -97,6 +114,7 @@ public class Main {
 
         MutaStudent(ListaStudenti);
 
+        return ListaStudenti;
     }
 
     static float retNota(String prenume, String nume, Map<Integer, Student> tineriS) {
@@ -148,5 +166,70 @@ public class Main {
         System.out.println("Formatia 2:");
         f2.forEach(System.out::println);
     }
+
+    public static void WriteToXls(Set<Student>studenti, String numeFisier){
+        try (XSSFWorkbook workbook = new XSSFWorkbook();
+             FileOutputStream out = new FileOutputStream(new File(numeFisier))) {
+
+            Sheet sheet = workbook.createSheet("Studenti");
+            int rowNum = 0;
+
+
+            Row headerRow = sheet.createRow(rowNum++);
+            headerRow.createCell(0).setCellValue("Matricol");
+            headerRow.createCell(1).setCellValue("Prenume");
+            headerRow.createCell(2).setCellValue("Nume");
+            headerRow.createCell(3).setCellValue("Formatie");
+            headerRow.createCell(4).setCellValue("Nota");
+
+            for (Student s : studenti) {
+                Row row = sheet.createRow(rowNum++);
+                row.createCell(0).setCellValue(s.getNumarMatricol());
+                row.createCell(1).setCellValue(s.getPrenume());
+                row.createCell(2).setCellValue(s.getNume());
+                row.createCell(3).setCellValue(s.getFormatieDeStudiu());
+                row.createCell(4).setCellValue(s.getNota());
+            }
+
+            workbook.write(out);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    public static List<Student> readFromXls(String numeFisier) {
+        List<Student> listaRecuperata = new ArrayList<>();
+
+        try (FileInputStream fis = new FileInputStream(new File(numeFisier));
+             XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
+
+            Sheet sheet = workbook.getSheetAt(0);
+            Iterator<Row> rowIterator = sheet.iterator();
+
+            if (rowIterator.hasNext()) {
+                rowIterator.next();
+            }
+
+            while (rowIterator.hasNext()) {
+                Row row = rowIterator.next();
+
+                int matricol = (int) row.getCell(0).getNumericCellValue();
+                String prenume = row.getCell(1).getStringCellValue();
+                String nume = row.getCell(2).getStringCellValue();
+                String formatie = row.getCell(3).getStringCellValue();
+                double nota = row.getCell(4).getNumericCellValue();
+
+                listaRecuperata.add(new Student(matricol, prenume, nume, formatie, nota));
+            }
+
+        } catch (IOException e) {
+            System.out.println("Eroare la citirea din Excel: " + e.getMessage());
+        }
+
+        return listaRecuperata;
+    }
 }
+
 
