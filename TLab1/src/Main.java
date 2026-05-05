@@ -10,8 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-
-
+import java.util.stream.Collectors;
 
 
 public class Main {
@@ -55,6 +54,56 @@ public class Main {
         for(Student st: studentsFromXls) {
             System.out.println(st);
         }
+
+
+        System.out.println();
+        System.out.println("------ LAB 9 ------");
+        //lab9
+        List <Student> studentiCuNote = Arrays.asList(
+                new Student(1025,"Andrei","Popa","ISM141/2", 8.70),
+                new Student(1024,"Ioan","Mihalcea","ISM141/1", 10),
+                new Student(1026,"Anamaria","Prodan","TI131/1", 8.90),
+                new Student(1029,"Bianca","Popescu","TI131/1,",  10),
+                new Student(1029,"Maria","Pana","TI131/2,",  4.10),
+                new Student(1029,"Gabriela","Mohanu","TI131/2,",  7.33),
+                new Student(1029,"Marius","Nasta","TI131/2,",  3.20),
+                new Student(1029,"Marius","Nasta","TI131/1,",  5.12),
+                new Student(1029,"Andrei","Dobrescu","TI131/2,",  2.22)
+        );
+
+        //a)
+        System.out.println("Studenti cu nota 10: ");
+        studentiCuNote.stream()
+                .filter(s->s.getNota() == 10)
+                .forEach(s-> System.out.println(s.getNume()+ " "+ s.getPrenume()+ " "+ s.getNota()));
+
+        //b)
+        System.out.println("Studenti cu nota sub 5: ");
+        studentiCuNote.stream()
+                .filter(s->s.getNota()<5)
+                .forEach(s-> System.out.println(s.getNume()+ " "+ s.getPrenume()+ " "+ s.getNota()));
+
+        //c)
+        List <Student> listaModificata = studentiCuNote.stream()
+                .map(s -> {
+                    if(s.getNota()<4){
+                        return new Student (s.getNumarMatricol(), s.getNume(), s.getPrenume(), s.getFormatieDeStudiu(), 4.0);
+                    }
+                    else return s;
+        })
+                .collect(Collectors.toList());
+        System.out.println("Lista Modificata: " + listaModificata);
+
+        //d)
+        double sumaNote = studentiCuNote.stream()
+                .map(s->s.getNota())
+                .reduce(0.0, (a,b)-> a+b);
+        System.out.println("Suma notelor: "+ sumaNote);
+
+        //e)
+        double medie = sumaNote/studentiCuNote.size();
+        System.out.println("Media notelor: " + medie);
+
     }
 
     static List<Student> citire(String fileName) throws IOException {
