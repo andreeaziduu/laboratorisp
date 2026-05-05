@@ -51,6 +51,38 @@ public class Main {
                 .anyMatch(n-> n==12);
 
         System.out.println("Exista valoarea 12 in lista? " + gasit );
+        System.out.println();
+
+        //ex 9.3.2
+        String text = "Acesta este un program scris in java pentru expresii lambda";
+        List <String> cuvinte = List.of(text.split(" "));
+        System.out.println("Lista: " + cuvinte);
+
+        //a)
+        long nrCuvinte = cuvinte.stream()
+                .filter(s -> s.length() >= 5)
+                .count();
+
+        List <String> listaFiltrata = cuvinte.stream()
+                .filter(s -> s.length() >= 5)
+                .collect(Collectors.toList());
+
+        System.out.println("Numar cuvinte: " + nrCuvinte);
+        System.out.println("Lista filtrata: "+ listaFiltrata);
+
+        //b)
+        List<String> listaOrdonata = listaFiltrata.stream()
+                .sorted()
+                .collect(Collectors.toList());
+
+        System.out.println("Lista Ordonata: " + listaOrdonata);
+
+        //c)
+        cuvinte.stream()
+                .filter(s-> s.startsWith("p"))
+                .findFirst()
+                .ifPresent(cuvant -> System.out.println("Cuv ce incepe cu p: "+ cuvant ));
+
 
     }
 }
